@@ -1,0 +1,11 @@
+기본 테스트
+python main.py --stock_code 000270 --learning
+
+reuse 사용할 테스트 : dqn_dnn_value_20210112234602.h 사용으로 테스트한것
+python main.py --stock_code 005930 --value_network_name dqn_dnn_value_20210112234602 --reuse_models --learning
+
+기존에 있는 신경망 추론용으로만 사용 : 새로운 주식으로
+python main.py --stock_code 000270 --start_epsilon 0 --num_epoches 1 --value_network_name dqn_dnn_value_20210112234602 --reuse_models
+
+아웃풋 내가볼수있게 테스트 : test1-dqn-dnn 폴더에 생성
+python main.py --stock_code 005930 --output_name test1 --learning
